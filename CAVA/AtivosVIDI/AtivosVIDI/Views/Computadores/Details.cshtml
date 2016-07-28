@@ -1,0 +1,130 @@
+﻿@model AtivosVIDI.Models.Computadores
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Computadores</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPatrimonio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPatrimonio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Processador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Processador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersaoWindows)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersaoWindows)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrigemCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrigemCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

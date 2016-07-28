@@ -1,0 +1,146 @@
+﻿@model AtivosVIDI.Models.Historicos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Historicos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativos.NumeroSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativos.NumeroSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Celulares.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Celulares.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chips.NumeroChip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chips.NumeroChip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chips1.NumeroChip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chips1.NumeroChip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores1.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores1.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores2.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores2.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Computadores.ServiceTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Computadores.ServiceTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssinouTermoEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssinouTermoEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssinouTermoDevolucao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssinouTermoDevolucao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUserInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataUserInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUserFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataUserFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataIntermediarioRetirou)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataIntermediarioRetirou)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataIntermediarioIdRecebeu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataIntermediarioIdRecebeu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFinalExperiencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataFinalExperiencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

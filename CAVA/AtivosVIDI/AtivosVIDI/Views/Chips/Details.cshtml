@@ -1,0 +1,58 @@
+﻿@model AtivosVIDI.Models.Chips
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Chips</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroChip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroChip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plano)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

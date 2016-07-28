@@ -1,0 +1,124 @@
+﻿@model IEnumerable<AtivosVIDI.Models.Historicos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelularId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComputadorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChipId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AtivoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColaboradorIdFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssinouTermoEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssinouTermoDevolucao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataUserInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataUserFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntermediarioIdAssinouTermo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataIntermediarioRetirou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntermediarioIdRecebeu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataIntermediarioIdRecebeu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Obs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFinalExperiencia)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelularId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComputadorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChipId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AtivoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColaboradorIdFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssinouTermoEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssinouTermoDevolucao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUserInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUserFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediarioIdAssinouTermo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataIntermediarioRetirou)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediarioIdRecebeu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataIntermediarioIdRecebeu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Obs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFinalExperiencia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
