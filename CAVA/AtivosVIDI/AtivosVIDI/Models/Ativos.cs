@@ -16,6 +16,13 @@ namespace AtivosVIDI.Models
 
         public int Id { get; set; }
 
+
+        public int? CelularId { get; set; }
+
+        public int? ComputadorId { get; set; }
+
+        public int? ChipId { get; set; }
+
         [Required]
         [StringLength(50)]
         public string NumeroSerie { get; set; }
@@ -50,6 +57,9 @@ namespace AtivosVIDI.Models
         public int NumeroPatrimonio { get; set; }
 
         public virtual Colaboradores Colaboradores { get; set; }
+        public virtual Computadores Computadores { get; set; }
+        public virtual Celulares Celulares { get; set; }
+        public virtual Chips Chips { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Historicos> Historicos { get; set; }

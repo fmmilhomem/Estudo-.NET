@@ -71,5 +71,7 @@ namespace AtivosVIDI.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SoftwaresComputadores> SoftwaresComputadores { get; set; }
+
+        public virtual ICollection<Ativos> Ativos { get; set; }
     }
 }

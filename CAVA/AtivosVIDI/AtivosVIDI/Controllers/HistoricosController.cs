@@ -65,13 +65,13 @@ namespace AtivosVIDI.Controllers
             }
 
             ViewBag.AtivoId = new SelectList(db.Ativos, "Id", "NumeroSerie", historicos.AtivoId);
-            ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
-            ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
+            //ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
+            //ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ColaboradorIdFinal);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Colaboradores, "Id", "CPF", historicos.ColaboradorIdFinal);
             ViewBag.IntermediarioIdRecebeu = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdRecebeu);
             ViewBag.IntermediarioIdAssinouTermo = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdAssinouTermo);
-            ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
+            //ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
             return View(historicos);
         }
 
@@ -88,13 +88,13 @@ namespace AtivosVIDI.Controllers
                 return HttpNotFound();
             }
             ViewBag.AtivoId = new SelectList(db.Ativos, "Id", "NumeroSerie", historicos.AtivoId);
-            ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
-            ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
+            //ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
+            //ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ColaboradorIdFinal);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Colaboradores, "Id", "CPF", historicos.ColaboradorIdFinal);
             ViewBag.IntermediarioIdRecebeu = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdRecebeu);
             ViewBag.IntermediarioIdAssinouTermo = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdAssinouTermo);
-            ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
+            //ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
             return View(historicos);
         }
 
@@ -112,13 +112,13 @@ namespace AtivosVIDI.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.AtivoId = new SelectList(db.Ativos, "Id", "NumeroSerie", historicos.AtivoId);
-            ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
-            ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
+            //ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
+            //ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ColaboradorIdFinal);
             ViewBag.ColaboradorIdFinal = new SelectList(db.Colaboradores, "Id", "CPF", historicos.ColaboradorIdFinal);
             ViewBag.IntermediarioIdRecebeu = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdRecebeu);
             ViewBag.IntermediarioIdAssinouTermo = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdAssinouTermo);
-            ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
+            //ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
             return View(historicos);
         }
 

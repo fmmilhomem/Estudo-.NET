@@ -1,0 +1,74 @@
+﻿@model AtivosVIDI.Models.Softwares
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Softwares</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeSoftware)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeSoftware)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaximoInstalacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaximoInstalacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KeySoftware)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KeySoftware)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrigemCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrigemCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

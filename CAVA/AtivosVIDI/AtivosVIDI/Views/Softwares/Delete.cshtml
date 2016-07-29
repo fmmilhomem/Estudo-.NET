@@ -1,0 +1,80 @@
+﻿@model AtivosVIDI.Models.Softwares
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Softwares</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeSoftware)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeSoftware)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaximoInstalacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaximoInstalacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KeySoftware)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KeySoftware)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrigemCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrigemCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

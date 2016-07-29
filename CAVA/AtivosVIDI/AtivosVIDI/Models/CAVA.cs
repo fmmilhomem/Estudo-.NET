@@ -58,14 +58,35 @@ namespace AtivosVIDI.Models
                 .HasForeignKey(e => e.AtivoId)
                 .WillCascadeOnDelete();
 
+
+            ///////////////////
+            modelBuilder.Entity<Computadores>()//pk
+                .HasMany(a => a.Ativos)//fk
+                .WithOptional(a => a.Computadores)
+                .HasForeignKey(c => c.ComputadorId)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Celulares>()
+               .HasMany(a => a.Ativos)
+               .WithOptional(a => a.Celulares)
+               .HasForeignKey(c => c.CelularId)
+               .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Chips>()
+               .HasMany(a => a.Ativos)
+               .WithOptional(a => a.Chips)
+               .HasForeignKey(c => c.ChipId)
+               .WillCascadeOnDelete();
+
+            ///////////////////////////
             modelBuilder.Entity<Celulares>()
                 .Property(e => e.Valor)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Celulares>()
-                .HasMany(e => e.Historicos)
-                .WithOptional(e => e.Celulares)
-                .HasForeignKey(e => e.CelularId);
+            //modelBuilder.Entity<Celulares>()
+            //    .HasMany(e => e.Historicos)
+            //    .WithOptional(e => e.Celulares)
+            //    .HasForeignKey(e => e.CelularId);
 
             modelBuilder.Entity<Chips>()
                 .Property(e => e.NumeroChip)
@@ -75,10 +96,10 @@ namespace AtivosVIDI.Models
                 .Property(e => e.Plano)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Chips>()
-                .HasMany(e => e.Historicos)
-                .WithOptional(e => e.Chips)
-                .HasForeignKey(e => e.ChipId);
+            //modelBuilder.Entity<Chips>()
+            //    .HasMany(e => e.Historicos)
+            //    .WithOptional(e => e.Chips)
+            //    .HasForeignKey(e => e.ChipId);
 
             modelBuilder.Entity<Chips>()
                 .HasMany(e => e.Historicos1)
@@ -192,10 +213,10 @@ namespace AtivosVIDI.Models
                 .Property(e => e.OrigemCompra)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Computadores>()
-                .HasMany(e => e.Historicos)
-                .WithOptional(e => e.Computadores)
-                .HasForeignKey(e => e.ComputadorId);
+            //modelBuilder.Entity<Computadores>()
+            //    .HasMany(e => e.Historicos)
+            //    .WithOptional(e => e.Computadores)
+            //    .HasForeignKey(e => e.ComputadorId);
 
             modelBuilder.Entity<Computadores>()
                 .HasMany(e => e.SoftwaresComputadores)

@@ -10,11 +10,6 @@ namespace AtivosVIDI.Models
     {
         public int Id { get; set; }
 
-        public int? CelularId { get; set; }
-
-        public int? ComputadorId { get; set; }
-
-        public int? ChipId { get; set; }
 
         public int? AtivoId { get; set; }
 
