@@ -24,33 +24,15 @@ namespace AtivosVIDI.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Ativos>()
-                .Property(e => e.NumeroSerie)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Ativos>()
-                .Property(e => e.Marca)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Ativos>()
                 .Property(e => e.Modelo)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Ativos>()
-                .Property(e => e.Origem)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Ativos>()
                 .Property(e => e.Valor)
                 .HasPrecision(19, 4);
-
-            modelBuilder.Entity<Ativos>()
-                .Property(e => e.Fornecedor)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Ativos>()
-                .Property(e => e.OrigemCompra)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Ativos>()
                 .HasMany(e => e.Historicos)

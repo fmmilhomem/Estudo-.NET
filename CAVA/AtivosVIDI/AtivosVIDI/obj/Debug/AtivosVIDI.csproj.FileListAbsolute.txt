@@ -138,3 +138,4 @@ C:\Users\f\Documents\RepositorioMilhomem\CAVA\AtivosVIDI\AtivosVIDI\obj\Debug\At
 C:\Users\f\Documents\RepositorioMilhomem\CAVA\AtivosVIDI\AtivosVIDI\obj\Debug\AtivosVIDI.pdb
 C:\Users\f\Documents\RepositorioMilhomem\CAVA\AtivosVIDI\AtivosVIDI\obj\Debug\AtivosVIDI.Migrations.UpdateII.resources
 C:\Users\f\Documents\RepositorioMilhomem\CAVA\AtivosVIDI\AtivosVIDI\obj\Debug\AtivosVIDI.csproj.GenerateResource.Cache
+C:\Users\f\Documents\RepositorioMilhomem\CAVA\AtivosVIDI\AtivosVIDI\obj\Debug\AtivosVIDI.Migrations.RemovendoColunasDeAtivos.resources

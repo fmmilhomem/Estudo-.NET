@@ -4,6 +4,7 @@ namespace AtivosVIDI.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
 
     public partial class Chips
@@ -40,5 +41,10 @@ namespace AtivosVIDI.Models
         public virtual ICollection<Historicos> Historicos1 { get; set; }
 
         public virtual ICollection<Ativos> Ativos { get; set; }
+
+        public static implicit operator DbSet<object>(Chips v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

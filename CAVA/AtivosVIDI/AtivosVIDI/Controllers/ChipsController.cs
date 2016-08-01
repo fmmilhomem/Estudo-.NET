@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AtivosVIDI.Models;
+using System.Data.Entity.Validation;
+using System.Text;
 
 namespace AtivosVIDI.Controllers
 {
@@ -52,8 +54,29 @@ namespace AtivosVIDI.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Chips.Add(chips);
-                db.SaveChanges();
+                try
+                {
+                    db.Chips.Add(chips);
+                    Ativos ativo = new Ativos();
+                    ativo.Chips = chips;
+                    db.Ativos.Add(ativo);
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var eve in e.EntityValidationErrors)
+                    {
+                        sb.AppendLine(string.Format("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State));
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            sb.AppendLine(string.Format("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage));
+                        }
+                    }
+                    var teste = sb.ToString();
+                }
                 return RedirectToAction("Index");
             }
 
@@ -90,7 +113,7 @@ namespace AtivosVIDI.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "ColaboradorId", chips.ColaboradorId);
+            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "Id", chips.ColaboradorId);
             return View(chips);
         }
 

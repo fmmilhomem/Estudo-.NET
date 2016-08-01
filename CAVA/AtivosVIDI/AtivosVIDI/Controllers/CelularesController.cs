@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AtivosVIDI.Models;
+using System.Data.Entity.Validation;
+using System.Text;
 
 namespace AtivosVIDI.Controllers
 {
@@ -52,8 +54,35 @@ namespace AtivosVIDI.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Celulares.Add(celulares);
-                db.SaveChanges();
+
+                try
+                {
+                    // Your code...
+                    // Could also be before try if you know the exception occurs in SaveChanges
+                    db.Celulares.Add(celulares);
+                    Ativos ativo = new Ativos();
+                    ativo.Celulares = celulares;
+
+                    //Ativo.Celulares = celularId, manipula (Celulares)
+                    db.Ativos.Add(ativo);
+
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var eve in e.EntityValidationErrors)
+                    {
+                        sb.AppendLine(string.Format("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State));
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            sb.AppendLine(string.Format("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage));
+                        }
+                    }
+                    var teste = sb.ToString();
+                }
                 return RedirectToAction("Index");
             }
 

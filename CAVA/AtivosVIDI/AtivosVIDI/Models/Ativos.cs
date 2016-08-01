@@ -23,33 +23,20 @@ namespace AtivosVIDI.Models
 
         public int? ChipId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string NumeroSerie { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Marca { get; set; }
+
 
         [StringLength(50)]
         public string Modelo { get; set; }
 
         public int? ColaboradorId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Origem { get; set; }
+
 
         [Column(TypeName = "money")]
         public decimal Valor { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Fornecedor { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string OrigemCompra { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime DataCompra { get; set; }
