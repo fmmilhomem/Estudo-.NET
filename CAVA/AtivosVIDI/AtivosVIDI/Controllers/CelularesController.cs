@@ -54,18 +54,12 @@ namespace AtivosVIDI.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 try
                 {
-                    // Your code...
-                    // Could also be before try if you know the exception occurs in SaveChanges
                     db.Celulares.Add(celulares);
                     Ativos ativo = new Ativos();
                     ativo.Celulares = celulares;
-
-                    //Ativo.Celulares = celularId, manipula (Celulares)
                     db.Ativos.Add(ativo);
-
                     db.SaveChanges();
                 }
                 catch (DbEntityValidationException e)
@@ -102,7 +96,7 @@ namespace AtivosVIDI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "CPF", celulares.ColaboradorId);
+            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "Id", celulares.ColaboradorId);
             return View(celulares);
         }
 
@@ -119,7 +113,7 @@ namespace AtivosVIDI.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "CPF", celulares.ColaboradorId);
+            ViewBag.ColaboradorId = new SelectList(db.Colaboradores, "Id", "Id", celulares.ColaboradorId);
             return View(celulares);
         }
 

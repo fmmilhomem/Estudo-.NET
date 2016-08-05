@@ -64,14 +64,16 @@ namespace AtivosVIDI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AtivoId = new SelectList(db.Ativos, "Id", "NumeroSerie", historicos.AtivoId);
-            //ViewBag.CelularId = new SelectList(db.Celulares, "Id", "Modelo", historicos.CelularId);
-            //ViewBag.ChipId = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ChipId);
-            ViewBag.ColaboradorIdFinal = new SelectList(db.Chips, "Id", "NumeroChip", historicos.ColaboradorIdFinal);
-            ViewBag.ColaboradorIdFinal = new SelectList(db.Colaboradores, "Id", "CPF", historicos.ColaboradorIdFinal);
-            ViewBag.IntermediarioIdRecebeu = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdRecebeu);
-            ViewBag.IntermediarioIdAssinouTermo = new SelectList(db.Colaboradores, "Id", "CPF", historicos.IntermediarioIdAssinouTermo);
-            //ViewBag.ComputadorId = new SelectList(db.Computadores, "Id", "ServiceTag", historicos.ComputadorId);
+            List<Colaboradores> items = new List<Colaboradores>();
+            var obj = new Colaboradores() { NomeCompleto = "SELECIONE", Id = 0 };
+
+            items.Add(obj);
+            items.AddRange(db.Colaboradores);
+
+            ViewBag.AtivoId = new SelectList(db.Ativos, "Id", "Id", historicos.AtivoId);
+            ViewBag.ColaboradorIdFinal = new SelectList(items, "Id", "NomeCompleto", obj);
+            ViewBag.IntermediarioIdRecebeu = new SelectList(db.Colaboradores, "Id", "NomeCompleto", historicos.IntermediarioIdRecebeu);
+            ViewBag.IntermediarioIdAssinouTermo = new SelectList(db.Colaboradores, "Id", "NomeCompleto", historicos.IntermediarioIdAssinouTermo);
             return View(historicos);
         }
 

@@ -56,13 +56,10 @@ namespace AtivosVIDI.Controllers
             {
                 try
                 {
-                    // Your code...
-                    // Could also be before try if you know the exception occurs in SaveChanges
                     db.Computadores.Add(computadores);
                     Ativos ativo = new Ativos();
                     ativo.Computadores = computadores;
                     db.Ativos.Add(ativo);
-
                     db.SaveChanges();
                 }
                 catch (DbEntityValidationException e)
