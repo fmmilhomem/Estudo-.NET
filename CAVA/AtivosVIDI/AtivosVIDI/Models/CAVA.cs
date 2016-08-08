@@ -34,11 +34,11 @@ namespace AtivosVIDI.Models
                 .Property(e => e.Valor)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Ativos>()
-                .HasMany(e => e.Historicos)
-                .WithOptional(e => e.Ativos)
-                .HasForeignKey(e => e.AtivoId)
-                .WillCascadeOnDelete();
+            //modelBuilder.Entity<Ativos>()
+            //    .HasMany(e => e.Historicos)
+            //    .WithOptional(e => e.Ativos)
+            //    .HasForeignKey(e => e.AtivoId)
+            //    .WillCascadeOnDelete();
 
 
             ///////////////////
@@ -83,10 +83,10 @@ namespace AtivosVIDI.Models
             //    .WithOptional(e => e.Chips)
             //    .HasForeignKey(e => e.ChipId);
 
-            modelBuilder.Entity<Chips>()
-                .HasMany(e => e.Historicos1)
-                .WithOptional(e => e.Chips1)
-                .HasForeignKey(e => e.ColaboradorIdFinal);
+            //modelBuilder.Entity<Chips>()
+            //    .HasMany(e => e.Historicos1)
+            //    .WithOptional(e => e.Chips1)
+            //    .HasForeignKey(e => e.ColaboradorIdFinal);
 
             modelBuilder.Entity<Colaboradores>()
                 .Property(e => e.CPF)
@@ -140,20 +140,20 @@ namespace AtivosVIDI.Models
                 .WithOptional(e => e.Colaboradores)
                 .HasForeignKey(e => e.ColaboradorId);
 
-            modelBuilder.Entity<Colaboradores>()
-                .HasMany(e => e.Historicos)
-                .WithOptional(e => e.Colaboradores)
-                .HasForeignKey(e => e.ColaboradorIdFinal);
+            //modelBuilder.Entity<Colaboradores>()
+            //    .HasMany(e => e.Historicos)
+            //    .WithOptional(e => e.Colaboradores)
+            //    .HasForeignKey(e => e.ColaboradorIdFinal);
 
-            modelBuilder.Entity<Colaboradores>()
-                .HasMany(e => e.Historicos1)
-                .WithOptional(e => e.Colaboradores1)
-                .HasForeignKey(e => e.IntermediarioIdRecebeu);
+            //modelBuilder.Entity<Colaboradores>()
+            //    .HasMany(e => e.Historicos1)
+            //    .WithOptional(e => e.Colaboradores1)
+            //    .HasForeignKey(e => e.IntermediarioIdRecebeu);
 
-            modelBuilder.Entity<Colaboradores>()
-                .HasMany(e => e.Historicos2)
-                .WithOptional(e => e.Colaboradores2)
-                .HasForeignKey(e => e.IntermediarioIdAssinouTermo);
+            //modelBuilder.Entity<Colaboradores>()
+            //    .HasMany(e => e.Historicos2)
+            //    .WithOptional(e => e.Colaboradores2)
+            //    .HasForeignKey(e => e.IntermediarioIdAssinouTermo);
 
             modelBuilder.Entity<Computadores>()
                 .Property(e => e.NumeroSerie)

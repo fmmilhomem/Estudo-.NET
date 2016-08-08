@@ -40,20 +40,5 @@ namespace AtivosVIDI.Models
         [Column(TypeName = "date")]
         public DateTime? DataFinalExperiencia { get; set; }
 
-        public virtual Ativos Ativos { get; set; }
-
-        public virtual Celulares Celulares { get; set; }
-
-        public virtual Chips Chips { get; set; }
-
-        public virtual Chips Chips1 { get; set; }
-
-        public virtual Colaboradores Colaboradores { get; set; }
-
-        public virtual Colaboradores Colaboradores1 { get; set; }
-
-        public virtual Colaboradores Colaboradores2 { get; set; }
-
-        public virtual Computadores Computadores { get; set; }
     }
 }
